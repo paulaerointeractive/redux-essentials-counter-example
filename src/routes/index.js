@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Home.js'
-import Shop from './Shop.js';
+import Home from 'components/Home'
+import Shop from 'components/Shop';
+import React from 'react';
 
 
-function App() {
+export const AppRoutes = () => {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -15,7 +13,5 @@ function App() {
           <Route path="shop" element={<Shop />} />
       </Routes>
     </BrowserRouter>
-  );
-}
-
-export default App;
+  )
+};
